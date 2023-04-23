@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EASY</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
@@ -14,14 +15,21 @@
         .header {
             height: 33.33vh;
             width: 100%;
-            background-image: linear-gradient(rgba(220, 220, 220, 0.5), rgba(255, 255, 255, 0));
+            background-color: rgba(220, 220, 220, 0.5);
             position: relative;
+        }
+        .divider {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 10' preserveAspectRatio='none' stroke='maroon' stroke-width='2'%3E%3Cpath d='M0 5 Q50 10 100 5' /%3E%3C/svg%3E");
+            background-repeat: repeat-x;
+            background-size: auto 10px;
+            height: 10px;
+            width: 100%;
         }
         .logo {
             background-color: maroon;
             color: white;
             font-family: Impact, sans-serif;
-            font-size: calc(66.67% * 33.33vh);
+            font-size: calc(66.67% * 33.33vh * 4);
             height: 66.67%;
             width: 33.33%;
             display: flex;
@@ -31,12 +39,13 @@
             position: absolute;
             left: 0;
             top: 16.67%;
+            overflow: hidden;
         }
         .testo {
             font-weight: bold;
             font-style: italic;
-            font-size: 2rem;
-            font-family: 'Georgia', serif;
+            font-size: 1rem;
+            font-family: 'Roboto', sans-serif;
             position: absolute;
             left: 36%;
             top: 50%;
@@ -66,6 +75,7 @@
         <div class="logo">EASY</div>
         <div id="testo" class="testo"></div>
     </div>
+    <div class="divider"></div>
     <div class="bottone">
         <a href="https://www.google.com">Vuoi risolvere il tuo problema? Clicca qui</a>
     </div>
