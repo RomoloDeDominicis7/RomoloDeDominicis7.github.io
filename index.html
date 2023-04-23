@@ -3,23 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ELIAS stai zitto</title>
+    <title>EASY</title>
     <style>
         body {
             margin: 0;
             padding: 0;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background-color: blue;
             font-family: Arial, sans-serif;
-            font-size: 2rem;
-            color: white;
+            background-color: white;
+        }
+        h1 {
+            font-family: Impact, sans-serif;
+            font-size: 4rem;
+        }
+        .professionisti {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            padding: 1rem;
+        }
+        img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center;
+        }
+        button {
+            font-size: 1.25rem;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
         }
     </style>
+    <script>
+        function mostraMessaggio() {
+            const messaggio = document.getElementById("messaggio");
+            messaggio.innerText = "Ciao! Quale è il tuo problema?";
+        }
+    </script>
 </head>
 <body>
-    <div>ELIAS stai zitto</div>
+    <h1>EASY</h1>
+    <div class="professionisti">
+        <img src="https://picsum.photos/150?random=1" alt="Avvocato">
+        <img src="https://picsum.photos/150?random=2" alt="Commercialista">
+        <img src="https://picsum.photos/150?random=3" alt="Dottore">
+    </div>
+    <button onclick="mostraMessaggio()">Clicca qui</button>
+    <p id="messaggio"></p>
 </body>
 </html>
