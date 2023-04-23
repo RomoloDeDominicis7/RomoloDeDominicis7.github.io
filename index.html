@@ -21,35 +21,55 @@
             background-color: maroon;
             color: white;
             font-family: Impact, sans-serif;
+            font-size: calc(66.67% * 33.33vh);
             height: 66.67%;
             width: 33.33%;
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
+            padding-left: 10px;
             position: absolute;
             left: 0;
             top: 16.67%;
         }
         .testo {
             font-weight: bold;
+            font-style: italic;
+            font-size: 2rem;
+            font-family: 'Georgia', serif;
             position: absolute;
-            left: 33.33%;
+            left: 36%;
             top: 50%;
             transform: translateY(-50%);
         }
         .bottone {
-            background-color: maroon;
-            color: white;
-            font-family: Impact, sans-serif;
-            font-weight: bold;
             width: 100%;
             height: 66.67vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            cursor: pointer;
+        }
+        .bottone a {
+            background-color: maroon;
+            color: white;
+            font-family: Impact, sans-serif;
+            font-weight: bold;
+            font-size: 1.5rem;
+            text-decoration: none;
+            padding: 20px 50px;
+            border-radius: 10px;
         }
     </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">EASY</div>
+        <div id="testo" class="testo"></div>
+    </div>
+    <div class="bottone">
+        <a href="https://www.google.com">Vuoi risolvere il tuo problema? Clicca qui</a>
+    </div>
+
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             fetch("testo.me")
@@ -62,12 +82,5 @@
             });
         });
     </script>
-</head>
-<body>
-    <div class="header">
-        <div class="logo">EASY</div>
-        <div id="testo" class="testo"></div>
-    </div>
-    <div class="bottone">Vuoi risolvere il tuo problema? Clicca qui</div>
 </body>
 </html>
