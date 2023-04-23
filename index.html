@@ -22,21 +22,27 @@
         }
         .professionisti {
             display: flex;
-            justify-content: space-around;
+            flex-direction: column;
+            align-items: center;
             width: 100%;
-            padding: 1rem;
         }
         img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
+            width: 100%;
+            height: auto;
             object-fit: cover;
             object-position: center;
+            margin-bottom: 1rem;
         }
         button {
             font-size: 1.25rem;
+            font-weight: bold;
             padding: 0.5rem 1rem;
+            background-color: red;
+            color: white;
+            border: none;
             cursor: pointer;
+            width: 75%;
+            text-align: center;
         }
     </style>
     <script>
@@ -49,11 +55,11 @@
 <body>
     <h1>EASY</h1>
     <div class="professionisti">
-        <img src="https://picsum.photos/150?random=1" alt="Avvocato">
-        <img src="https://picsum.photos/150?random=2" alt="Commercialista">
-        <img src="https://picsum.photos/150?random=3" alt="Dottore">
+        <img src="https://www.atlantedelleprofessioni.it/var/ezdemo_site/storage/images/_aliases/hero/5/6/4/0/20465-9-ita-IT/Avvocato.jpg" alt="Avvocato">
+        <!-- Inserisci gli altri URL delle immagini dei professionisti qui -->
     </div>
     <button onclick="mostraMessaggio()">Clicca qui</button>
     <p id="messaggio"></p>
 </body>
 </html>
+
