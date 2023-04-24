@@ -1,96 +1,35 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EASY</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: white;
-        }
-        .header {
-            height: 33.33vh;
-            width: 100%;
-            background-color: rgba(220, 220, 220, 0.5);
-            position: relative;
-        }
-        .divider {
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 10' preserveAspectRatio='none' stroke='maroon' stroke-width='2'%3E%3Cpath d='M0 5 Q50 10 100 5' /%3E%3C/svg%3E");
-            background-repeat: repeat-x;
-            background-size: auto 10px;
-            height: 10px;
-            width: 100%;
-        }
-        .logo {
-            background-color: maroon;
-            color: white;
-            font-family: Impact, sans-serif;
-            font-size: calc(66.67% * 33.33vh * 4);
-            height: 66.67%;
-            width: 33.33%;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            padding-left: 10px;
-            position: absolute;
-            left: 0;
-            top: 16.67%;
-            overflow: hidden;
-        }
-        .testo {
-            font-weight: bold;
-            font-style: italic;
-            font-size: 1rem;
-            font-family: 'Roboto', sans-serif;
-            position: absolute;
-            left: 36%;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-        .bottone {
-            width: 100%;
-            height: 66.67vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .bottone a {
-            background-color: maroon;
-            color: white;
-            font-family: Impact, sans-serif;
-            font-weight: bold;
-            font-size: 1.5rem;
-            text-decoration: none;
-            padding: 20px 50px;
-            border-radius: 10px;
-        }
-    </style>
-</head>
-<body>
-    <div class="header">
-        <div class="logo">EASY</div>
-        <div id="testo" class="testo"></div>
-    </div>
-    <div class="divider"></div>
-    <div class="bottone">
-        <a href="https://www.google.com">Vuoi risolvere il tuo problema? Clicca qui</a>
-    </div>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+  h1 {
+    font-family: Impact, sans-serif;
+    font-size: 5rem;
+  }
+  .content-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+</style>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            fetch("testo.me")
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById("testo").innerText = data;
-            })
-            .catch(error => {
-                console.error("Error fetching 'testo.me':", error);
-            });
-        });
-    </script>
-</body>
-</html>
+<div class="container content-container">
+  <div class="text-center my-5">
+    <h1>EASY!</h1>
+  </div>
+  <div class="text-center my-5" id="testo-caricato">
+    <!-- Il testo da testo.me verrà inserito qui -->
+  </div>
+  <div class="text-center my-5">
+    <a href="https://www.google.com" class="btn btn-danger btn-lg px-5" role="button">Vuoi risolvere il tuo problema? Clicca qui</a>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function() {
+    $.get("testo.me", function(data) {
+      $("#testo-caricato").html(data);
+    });
+  });
+</script>
