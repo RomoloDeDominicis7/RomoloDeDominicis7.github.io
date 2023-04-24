@@ -62,12 +62,31 @@
             </div>
         </section>
         <!-- Trial-->
-        <section class="page-section bg-primary" id="trial">
+        <section class="page-section" id="trial">
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8 text-center">
-                        <label for="customRange1">Example range</label>
-                        <input type="range" class="custom-range" id="customRange1">
+                        <select class="custom-select custom-select-lg mb-3">
+                            <option selected>Scrivi per conto di un'azienda o per un privato (familiari, amici o te stesso)</option>
+                            <option value="1">Azienda</option>
+                            <option value="2">Privato</option>
+                        </select>
+                        <select class="custom-select custom-select-lg mb-3">
+                            <option selected>Sai già che professionista cercare?</option>
+                            <option value="1">Avvocato</option>
+                            <option value="2">Commercialista o raggioniere</option>
+                            <option value="3">Medico</option>
+                            <option value="4">Psicologo</option>
+                            <option value="5">Notaio</option>
+                            <option value="6">Architetto</option>
+                            <option value="7">Falegname, Elettricista, Idraulico, Muratore o Tuttofare</option>
+                            <option value="8">Personal Trainer o allenatore</option>
+                            <option value="9">Altro</option>
+                        </select>
+                        <label for="customRange1">Quanto considera la sua scelta dipendente dal prezzo?</label>
+                        <input type="range" class="custom-range" min="0" max="7" id="customRange1">
+                        <label for="customRange2">Quanto considera la sua scelta dipendente dalla qualità del servizio offerto dal professionista?</label>
+                        <input type="range" class="custom-range" min="0" max="7" id="customRange2">
                     </div>
                 </div>
             </div>
