@@ -1,0 +1,48 @@
+[
+  {
+    "id": 1,
+    "question": "Il problema che ti afflige ti interessa come privato o per l'azienda dove lavori?",
+    "options": [
+      { "value": "privato", "text": "Privato" },
+      { "value": "azienda", "text": "Azienda" }
+    ]
+  },
+  {
+    "id": 2,
+    "question": "Sai già a che tipo di professionista rivolgerti? Esempio: avvocato, commercialista, consulente manageriale",
+    "options": [
+      { "value": "si", "text": "Sì" },
+      { "value": "no", "text": "No" }
+    ]
+  },
+  {
+    "id": 3,
+    "question": "A che tipo di professionista vorresti rivolgerti?",
+    "options": [
+      { "value": "avvocato", "text": "Avvocato" },
+      { "value": "notaio", "text": "Notaio" },
+      { "value": "commercialista", "text": "Commercialista o Ragioniere" },
+      { "value": "medico", "text": "Medico" },
+      { "value": "psicologo", "text": "Psicologo" },
+      { "value": "consulenti", "text": "Consulenti Manageriali" },
+      { "value": "meccanico", "text": "Meccanico" },
+      { "value": "falegname", "text": "Falegname" },
+      { "value": "elettrotecnico", "text": "Elettrotecnico" },
+      { "value": "altro", "text": "Altro" }
+    ]
+  },
+  {
+    "id": 4,
+    "question": "A che tipo di professionista vorresti rivolgerti?",
+    "options": [],
+    "inputType": "text",
+    "maxLength": 100
+  },
+  {
+    "id": 5,
+    "question": "Spiegaci il tuo problema",
+    "options": [],
+    "inputType": "textarea",
+    "maxLength": 5000
+  }
+]
