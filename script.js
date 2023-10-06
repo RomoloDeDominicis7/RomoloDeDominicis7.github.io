@@ -3,7 +3,7 @@ const context = canvas.getContext("2d");
 const boxSize = 20;
 const canvasSize = canvas.width;
 let foodImg = new Image();
-foodImg.src = 'apple.jpg';
+foodImg.src = 'apple.png';
 
 
 let snake = [{ x: 10 * boxSize, y: 10 * boxSize }];
