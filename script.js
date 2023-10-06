@@ -62,12 +62,19 @@ function update() {
         snake.pop();
     }
 
-    // Game over conditions
-    if (head.x < 0 || head.x >= canvasSize || head.y < 0 || head.y >= canvasSize || snake.some(snakePart => snakePart.x === head.x && snakePart.y === head.y && snakePart !== head)) {
-        snake = [{ x: 10 * boxSize, y: 10 * boxSize }];
-        dx = boxSize;
-        dy = 0;
-    }
+// Wrap-around conditions
+if (head.x < 0) head.x = canvasSize - boxSize;
+if (head.x >= canvasSize) head.x = 0;
+if (head.y < 0) head.y = canvasSize - boxSize;
+if (head.y >= canvasSize) head.y = 0;
+
+// Game over condition for colliding with itself
+if (snake.some(snakePart => snakePart.x === head.x && snakePart.y === head.y && snakePart !== head)) {
+    snake = [{ x: 10 * boxSize, y: 10 * boxSize }];
+    dx = boxSize;
+    dy = 0;
+}
+
 
     // Clear canvas
     context.clearRect(0, 0, canvasSize, canvasSize);
