@@ -1,11 +1,62 @@
 body {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     height: 100vh;
-    background-color: #f4f4f4;
+    background-color: #E4A860; /* Colore sabbia */
 }
 
 canvas {
     border: 1px solid black;
+    background: #E4A860; /* Colore sabbia come background base, sostituisci con un'immagine di sfondo se lo desideri */
+}
+
+#menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 420px;
+    margin-bottom: 10px;
+}
+
+#score {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#controls {
+    display: grid;
+    grid-template-areas:
+        "left up right"
+        "left down right";
+    gap: 5px;
+}
+
+#up {
+    grid-area: up;
+}
+
+#left {
+    grid-area: left;
+}
+
+#right {
+    grid-area: right;
+}
+
+#down {
+    grid-area: down;
+}
+
+button {
+    background: #ccc;
+    border: 1px solid #999;
+    font-size: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button.active {
+    background: #999;
 }
