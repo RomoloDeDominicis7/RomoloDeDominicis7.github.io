@@ -93,6 +93,26 @@ if (snake.some(snakePart => snakePart.x === head.x && snakePart.y === head.y && 
     document.getElementById('score').textContent = "Punteggio: " + (snake.length - 1);
 }
 
-setInterval(update, 100);
+const speeds = {
+    easy: 100,
+    medium: 80,
+    hard: 60
+};
+
+let gameSpeed = speeds.easy;
+let gameInterval;
+
+function setGameSpeed(speed) {
+    clearInterval(gameInterval);
+    gameSpeed = speeds[speed];
+    gameInterval = setInterval(update, gameSpeed);
+}
+
+document.getElementById('easy').addEventListener('click', () => setGameSpeed('easy'));
+document.getElementById('medium').addEventListener('click', () => setGameSpeed('medium'));
+document.getElementById('hard').addEventListener('click', () => setGameSpeed('hard'));
+
+gameInterval = setInterval(update, gameSpeed);
+
 
 
