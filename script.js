@@ -2,6 +2,11 @@ const canvas = document.getElementById("snakeCanvas");
 const context = canvas.getContext("2d");
 const boxSize = 20;
 const canvasSize = canvas.width;
+foodImg.src = 'apple.jpg';  // sostituisci 'apple.jpg' con il nome effettivo dell'immagine
+
+let foodImg = new Image();
+foodImg.src = 'path_to_your_image.jpg';  // sostituisci con il percorso effettivo dell'immagine nella tua cartella
+
 
 let snake = [{ x: 10 * boxSize, y: 10 * boxSize }];
 let food = {
@@ -26,9 +31,9 @@ function drawSnake() {
 }
 
 function drawFood() {
-    context.fillStyle = 'red';
-    context.fillRect(food.x, food.y, boxSize, boxSize);
+    context.drawImage(foodImg, food.x, food.y, boxSize, boxSize);
 }
+
 
 function moveSnake(event) {
     document.querySelectorAll('button').forEach(btn => btn.classList.remove('active'));
@@ -46,6 +51,9 @@ function moveSnake(event) {
         dx = 0; dy = boxSize;
         document.getElementById('down').classList.add('active');
     }
+}
+foodImg.onload = function() {
+    drawFood();
 }
 
 function update() {
